@@ -5,9 +5,60 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: 'Shadows Into Light', cursive;
+  color: white;
+  background: #2C3E50;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #FD746C, #2C3E50);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #FD746C, #2C3E50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+}
+p{
+  margin: 0;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+span{
+ text-align: center;
+}
+
+.search,option{
+	margin:0.5rem auto;
+  text-align: center;
+  width: 100%;
+}
+
+#search,option{
+  text-align: center;
+	margin: 0.5rem auto;
+}
+
+ .statelist .state{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 1rem;
+    width: 100%;
+    
+
+}
+
+.describe{
+	text-align: center;
+	 min-height:250px;
+	 border:1px solid #FD735C;
+	 background:linear-gradient(to left, #FD735C, #2C3C60);
+}
+
+.describe p{
+	padding:0.5rem 0;
+}
+
+
+.top{
+  position:fixed;
+  bottom:20px;
+  right:15px;
 }

@@ -1,24 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Navbar from './components/Navbar';
+import {BrowserRouter,Route} from 'react-router-dom';
+import Home from './components/Home';
+import StateList from './components/StateList';
+import DayList from './components/DayList';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <Navbar/>
+         <h2>Covid 19 Status india</h2>
+         <BrowserRouter>
+         <Route exact path="/" component={StateList}></Route>
+         <Route path="/daywise" component={DayList}></Route>
+         <Route  path="/home" component={Home}></Route>
+         </BrowserRouter>
+       <div className="top">
+         <a href="#navbar"><button type="button" className="btn btn-outline-warning">&#8593;</button></a>
+       </div>
     </div>
   );
 }
